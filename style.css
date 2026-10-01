@@ -1,0 +1,228 @@
+/*------------------ КОМПЛЕКТАЦИИ ------------------  */
+.house-packages {
+    background-color: #ffffff;
+}
+
+.house-packages__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-template-rows: auto 1fr;
+}
+
+.house-packages__item {
+    background: #f9f9f9;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid #eaeaea;
+    display: grid;
+    grid-row: span 2;
+    grid-template-rows: subgrid;
+    box-sizing: border-box;
+}
+
+.house-packages__item-header {
+    background: linear-gradient(180deg, #ffa925 0%, #ffc265 100%);
+    border-radius: 0 0 24px 24px;
+    padding: 20px;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.house-packages__badge {
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 16px;
+    padding: 4px 8px;
+    max-width: max-content;
+
+    font-family: "Inter Medium";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.house-packages__item-title {
+    font-family: "Inter SemiBold";
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.house-packages__item-subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.house-packages__price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.house-packages__price {
+    font-family: "Inter SemiBold";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    color: #fff;
+}
+
+.house-packages__item-body {
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.house-packages__features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.house-packages__feature {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+    color: #2d2d2d;
+    position: relative;
+    padding-left: 32px;
+}
+
+.house-packages__feature--included::before,
+.house-packages__feature--excluded::before {
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 24px;
+
+    position: absolute;
+    left: 0px;
+    top: 0;
+    transform: none;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.house-packages__feature--included::before {
+    background-size: 19px 14px;
+    background-image: url('data:image/svg+xml;utf8,<svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.1217 0.396825C17.5926 -0.132275 16.7989 -0.132275 16.2698 0.396825L6.34921 10.3175L2.24868 6.21693C1.71958 5.68783 0.925926 5.68783 0.396825 6.21693C-0.132275 6.74603 -0.132275 7.53968 0.396825 8.06878L5.42328 13.0952C5.68783 13.3598 5.95238 13.4921 6.34921 13.4921C6.74603 13.4921 7.01058 13.3598 7.27513 13.0952L18.1217 2.24868C18.6508 1.71958 18.6508 0.925926 18.1217 0.396825Z" fill="%23E78C00" /></svg>');
+}
+
+.house-packages__feature--excluded::before {
+    background-size: 14px 14px;
+    background-image: url('data:image/svg+xml;utf8,<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.05483 6.51856L12.7188 1.85456C13.1432 1.43018 13.1432 0.742674 12.7188 0.318289C12.2944 -0.106096 11.6069 -0.106096 11.1825 0.318289L6.51856 4.98228L1.85456 0.318289C1.43018 -0.106096 0.742674 -0.106096 0.318289 0.318289C-0.106096 0.742674 -0.106096 1.43018 0.318289 1.85456L4.98228 6.51856L0.318289 11.1825C-0.106096 11.6069 -0.106096 12.2944 0.318289 12.7188C0.530481 12.931 0.808454 13.0371 1.08643 13.0371C1.3644 13.0371 1.64237 12.931 1.85456 12.7188L6.51856 8.05483L11.1825 12.7188C11.3947 12.931 11.6727 13.0371 11.9507 13.0371C12.2287 13.0371 12.5066 12.931 12.7188 12.7188C13.1432 12.2944 13.1432 11.6069 12.7188 11.1825L8.05483 6.51856Z" fill="%239C9999" /></svg>');
+}
+
+.house-packages__feature.house-packages__feature--excluded {
+    color: #9c9999;
+}
+
+.house-packages__button {
+    width: 100%;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    margin-top: auto;
+    border-radius: 20px;
+    padding: 12px 48px;
+    background: #e78c00;
+
+    font-family: "Inter SemiBold";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .house-packages__list {
+        display: flex !important;
+        grid-template-rows: none !important;
+        gap: 8px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 0 8px 8px 8px;
+        margin: 0 -8px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .house-packages__list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .house-packages__list {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .house-packages__item {
+        display: flex !important;
+        flex-direction: column;
+        grid-row: auto !important;
+        grid-template-rows: none !important;
+
+        flex-shrink: 0;
+        width: 86%;
+        scroll-snap-align: start;
+    }
+
+    .house-packages__item-header {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .house-packages__item-title {
+        font-size: 20px;
+    }
+
+    .house-packages__item-subtitle {
+        min-height: 60px;
+    }
+
+    .house-packages__price-row {
+        margin-top: auto;
+    }
+
+    .house-packages__price {
+        font-size: 20px;
+    }
+
+    .house-packages__item-body {
+        padding: 20px 16px;
+    }
+}
